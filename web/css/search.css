@@ -1,0 +1,81 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+a{
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+nav{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    left: 0px;
+    margin-left: 50px ;
+    margin-top: 50px;
+}
+nav a:first-child:after{
+    content: '|';
+    margin: 10px ;
+}
+nav a:nth-child(2)::after{
+    content: '|';
+    margin: 10px ;
+}
+
+
+
+.searchpage{
+    background-color: black;
+    position: relative;
+    width: 100vw;
+    color: white;
+    height: 1500px;
+}
+.searchbox{
+   
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    
+}
+
+.searchbox input{
+    border: none;
+    padding: 10px;
+    border-radius: 20px; /* 음각제거한것 위쪽라인에 진한색들어가있는것  인풋에 공통으로 들어감 중복제거한것.*/
+}
+
+
+.searchbox input[type=text]{  /*[]속성 선택자사용한것  input에 보면 타입 그대로 가져온것이다.*/
+    width: 800px;
+    height: 60px;
+    background: linear-gradient(to right, purple,rgb(143, 8, 8),rgb(175, 8, 8),rgb(200, 8, 8),red,brown,rgb(204, 141, 4),gold,rgb(255, 255, 0),yellow,rgb(189, 207, 125));
+      ;
+    font-size: 2rem;
+    color: grey;
+}
+.searchbox input[type=text]::placeholder{  /* css3부터 나온 placeholder같은 가상클래스는 ::써줘야함.*/
+    color: grey;
+      
+}
+
+.searchbox input[type=submit]{
+    width: 70px;
+    height: 60px;
+    cursor: pointer;
+    top:  -200px;
+  
+}
+

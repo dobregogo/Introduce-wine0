@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+a{
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+nav{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    left: 0px;
+    margin-left: 50px ;
+    margin-top: 50px;
+}
+nav a:first-child:after{
+    content: '|';
+    margin: 10px ;
+}
+nav a:nth-child(2)::after{
+    content: '|';
+    margin: 10px ;
+}
+
+
+
+.boardpage{
+    background-color: black;
+    position: relative;
+    width: 100vw;
+    color: white;
+    height: 2000px;
+}
