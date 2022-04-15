@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 500px;
+}
+
+.container .box{
+    transform-style: preserve-3d;
+    animation:  spin 25s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: perspective(500px) rotateX(0deg) rotate(0deg); /*rotate로 원통의 기울기 조절*/
+    }  /* perspective로 카메라시점 원거리조절*/
+    100%{
+        transform: perspective(500px) rotateX(360deg) rotate(0deg);
+    }
+}
+
+.container .box span{
+
+    position:absolute;
+    color: aliceblue;
+    font-size: 2rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 900;
+    transform-style: preserve-3d;
+    padding: 0 10px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.5), transparent);
+    line-height: 0.76em;
+    text-shadow: 0 5px 15px  rgba(0. 0. 0. 0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) *22.5deg)) translateZ(200px);
+
+}
+/* 360/16 = 22.5deg*/
+
+.container .box span i:nth-child(1){
+    font-size: 1.5rem;
+    color: red;
+}
+
+.container .box span i:nth-child(2){
+    font-size: 1.5rem;
+    color: rebeccapurple;
+}
