@@ -8,6 +8,7 @@
 
 .body{
   width: 4100px;
+  background-color: black;
 }
 a{
     color: #fff;
@@ -85,7 +86,7 @@ nav a:nth-child(2)::after{
 .container{
     width: 1000px;
     height: 600px;
-    border: 1px solid white;
+    border: 1px solid #494949;
     position: relative;
     top: 300px;
     left: 50px;
@@ -184,14 +185,44 @@ nav a:nth-child(2)::after{
 }
 
 .describe2{
-    width: 1300px;
-    height: 500px;
-    border: 1px solid red;
+    width: 1250px;
+    height: 400px;
     position: relative;
     left: -400px;
     top: 600px;
-    
+    background-color: #fff;
+
 }
+
+.describe2 .slider div{
+  display: flex;
+  padding-left: 30px;
+  background-color: #000;
+}
+
+.describe2 .slider img{
+  width: 400px;
+  height: 400px;
+
+}
+
+.searchResult{
+  width: 350px;
+  height: 600px;
+  border: 1px solid red;
+  position: relative;
+  left: 610px;
+  top: -440px;
+
+}
+.searchResult div{
+  font-size: .8rem;
+  padding-left: 4px;
+  color: red;
+
+}
+
+
 .group{
     position: relative;
     left: 300px;
@@ -312,4 +343,6 @@ nav a:nth-child(2)::after{
       transform: translate(-50%, -75%) rotate(360deg);
     }
   }
+  
+
   
