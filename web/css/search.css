@@ -6,6 +6,10 @@
     
 }
 
+.body{
+  width: 4100px;
+  background-color: black;
+}
 a{
     color: #fff;
     font-size: 2em;
@@ -43,7 +47,7 @@ nav a:nth-child(2)::after{
     width: 100vw;
     height: 100px;
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -79,3 +83,266 @@ nav a:nth-child(2)::after{
   
 }
 
+.container{
+    width: 1000px;
+    height: 600px;
+    border: 1px solid #494949;
+    position: relative;
+    top: 300px;
+    left: 50px;
+}
+
+.wineImageBox{
+    width: 400px;
+    height: 600px;
+    /* border: 5px solid red; */
+    position: absolute;
+}
+.wineImageBox img{
+    width: 400px;
+    height: 600px;
+}
+.describe{
+    width: 600px;
+    height: 600px;
+    /* border: 4px solid red; */
+    position: absolute;
+    left: 400px;
+}
+
+.foodImageBox{
+    width: 400px;
+    height: 700px;
+    /* border: 5px solid red; */
+    position: absolute;
+}
+.foodImageBox img{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 400px;
+}
+
+.controls{
+    color: #fff;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+   
+    position: relative;
+    top: 0;
+    right: 500px;
+}
+.controls span{
+    padding: 40px;
+    background-color: #494949;
+    border-radius: 50%;
+   
+    
+}
+
+.controls span.prev{
+    position: relative;
+    top: 60px;
+    left: -300px;
+
+}
+.controls span.next{
+    position: relative;
+    left: 800px;
+    top: 40px;
+
+
+}
+
+.slides{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4100px;
+    transition: left 0.5s ease-out;
+}
+.slides li:not(:last-child){
+    float: left;
+    
+}
+.slides li{
+
+    list-style: none;
+}
+.slides li img{
+    width: 400px;
+    height: 300px;
+}
+
+.slide_wrapper{
+    position: relative;
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    top: 100px;
+    left: 50px;
+}
+
+.describe2{
+    width: 1250px;
+    height: 400px;
+    position: relative;
+    left: -400px;
+    top: 600px;
+    background-color: #fff;
+
+}
+
+.describe2 .slider div{
+  display: flex;
+  padding-left: 30px;
+  background-color: #000;
+}
+
+.describe2 .slider img{
+  width: 400px;
+  height: 400px;
+
+}
+
+.searchResult{
+  width: 350px;
+  height: 600px;
+  border: 1px solid red;
+  position: relative;
+  left: 610px;
+  top: -440px;
+
+}
+.searchResult div{
+  font-size: .8rem;
+  padding-left: 4px;
+  color: red;
+
+}
+
+
+.group{
+    position: relative;
+    left: 300px;
+    top: 150px;
+}
+.circle:nth-child(1){
+    position: absolute;
+    left: -200px;
+  }
+  
+  
+  .circle:nth-child(2){
+    position: absolute;
+    left: 0%;
+  }
+  
+  .circle:nth-child(3){
+    position: absolute;
+    left: 200px;
+  }
+
+.circle:nth-child(1)  .wave{
+    background: red;
+  }
+  .circle:nth-child(2)  .wave{
+    background: yellow;
+  }
+  .circle:nth-child(3)  .wave{
+    background: greenyellow;
+  }
+  
+  p{
+    position: absolute;
+    top: 70%;
+    left: 27.5%;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0 5px #494949;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wave::before,
+  .wave::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  
+  .circle:nth-child(1) .wave::before {
+    border-radius: 45%;
+    background: rgba(255, 255, 255, 1);
+    animation: animate 14s linear infinite;
+  }
+  
+  .circle:nth-child(1) .wave::after {
+    border-radius: 20%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 14s linear infinite;
+  }
+
+
+  .circle:nth-child(2) .wave::before {
+    border-radius: 45%;
+    background: rgba(255, 255, 255, 1);
+    animation: animate 4s linear infinite;
+  }
+  
+  .circle:nth-child(2) .wave::after {
+    border-radius: 20%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 14s linear infinite;
+  }
+
+
+
+  .circle:nth-child(3) .wave::before {
+    border-radius: 45%;
+    background: rgba(255, 255, 255, 1);
+    animation: animate 2s linear infinite;
+  }
+  
+  .circle:nth-child(3) .wave::after {
+    border-radius: 20%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 10s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+  
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+  
+
+  
