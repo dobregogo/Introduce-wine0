@@ -98,3 +98,27 @@ p{
     transform: translate(-50%, -75%) rotate(360deg);
   }
 }
+
+@media (max-width: 800px ){
+  .group{
+    position: relative;
+    margin-top: -170%;
+    margin-left: 210%;
+  }
+
+  p{
+    top: 50px;
+    left: 13px;
+    font-size: 0.8em;
+  }
+  .circle{
+    width: 70px;
+  }
+  .circle:nth-child(1){
+    left: -100px;
+  }
+  .circle:nth-child(3){
+    left: 100px;
+  }
+}
+

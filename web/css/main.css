@@ -18,7 +18,7 @@ nav{
     width: 200px;
     display: flex;
     left: 0px;
-    margin-left: 50px ;
+    margin-left: 35px ;
     margin-top: 50px;
 }
 
@@ -41,6 +41,25 @@ nav a:nth-child(2)::after{
     color: white;
     height: 100vh;
 }
+
+/* 아이폰 se 기준 375/667 */
+@media (max-width: 800px ){
+    .mainpage{
+        width: 375px;
+        height: 667px;
+    }
+
+    
+
+
+   
+    
+    
+}
+
+
+
+
 
 
 /* .mainpage::before{

@@ -18,20 +18,27 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 500px;
+    top: 500px;  /* 이거 없애면 그룹화한 서클 모바일 위치 날라감. */
+    
 }
 
 .container .box{
     transform-style: preserve-3d;
     animation:  spin 25s linear infinite;
+    
 }
+
+.container .box:hover{
+    animation-play-state: paused;
+}
+
 
 @keyframes spin{
     0%{
-        transform: perspective(500px) rotateX(0deg) rotate(0deg); /*rotate로 원통의 기울기 조절*/
+        transform: perspective(500px) rotateX(0deg)  rotate(0deg); /*rotate로 원통의 기울기 조절*/
     }  /* perspective로 카메라시점 원거리조절*/
     100%{
-        transform: perspective(500px) rotateX(360deg) rotate(0deg);
+        transform: perspective(500px) rotateX(360deg)  rotate(0deg);
     }
 }
 
@@ -62,3 +69,55 @@ body{
     font-size: 1.5rem;
     color: rebeccapurple;
 }
+
+
+@media screen and (min-width:280px) and (max-width:800px) {
+    .container .box span i:nth-child(1), i:nth-child(2){
+        font-size: initial;
+    }
+
+
+    .container .box span{
+        top: -180px;
+        left: 790px;
+        transform: translate(-50%, -50%) rotateX(calc(var(--i) *22.5deg)) translateZ(50px);
+        
+        
+     
+     
+    }
+
+    @keyframes spin {
+        0%{
+            transform: perspective(500px) rotateX(360deg) rotateY(20deg)  rotateZ(80deg)  ; /*rotate로 원통의 기울기 조절*/
+        }  /* perspective로 카메라시점 원거리조절*/
+        100%{
+            transform: perspective(500px) rotateX(0deg) rotate(0deg) ;
+        }
+
+        
+    }
+
+    .container{
+        left: -400px;
+
+
+    }
+
+    .container .box{
+        animation:  spin 5s  ;
+
+    }
+
+
+    .container .box span i:nth-child(1), i:nth-child(2){
+     font-size: initial;
+    }
+    
+
+
+
+    
+} 
+
+
