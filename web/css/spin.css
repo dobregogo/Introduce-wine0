@@ -80,7 +80,7 @@ body{
     .container .box span{
         top: -180px;
         left: 790px;
-        transform: translate(-50%, -50%) rotateX(calc(var(--i) *22.5deg)) translateZ(50px);
+        transform: translate(-50%, -50%) rotateX(calc(var(--i) *300deg)) translateZ(50px);
         
         
      
@@ -92,7 +92,7 @@ body{
             transform: perspective(500px) rotateX(360deg) rotateY(20deg)  rotateZ(80deg)  ; /*rotate로 원통의 기울기 조절*/
         }  /* perspective로 카메라시점 원거리조절*/
         100%{
-            transform: perspective(500px) rotateX(0deg) rotate(0deg) ;
+            transform: perspective(500px) rotateX(deg) rotate(0deg) skew(30deg)  ; 
         }
 
         
@@ -105,9 +105,11 @@ body{
     }
 
     .container .box{
-        animation:  spin 5s  ;
+        animation:  spin 2s linear   ;
+
 
     }
+
 
 
     .container .box span i:nth-child(1), i:nth-child(2){
