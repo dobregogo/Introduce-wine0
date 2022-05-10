@@ -59,12 +59,14 @@
             let enter = document.getElementById('enter');
             enter.addEventListener('click',entertry);
 
+            
+
             function entertry(){
                 let userid = document.getElementById('userid').value;
                 let userps = document.getElementById('userps').value;
                 
                 if(userid == 'js00' && userps == '123'){
-                    alert("로그인 성공");
+                    alert(userid);
                     console.log("로그인 성공");
                 }
                 else{
@@ -79,7 +81,7 @@
                 let userps = document.getElementById('userps').value;
                 
                 if(userid == 'js00' && userps == '123'){
-                    alert("로그인 성공");
+                    alert(userid);
                     console.log("로그인 성공")
                 }
                 else{
