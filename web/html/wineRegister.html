@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wine_register</title>
+    <style>
+        .judge{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wineRegisterpage">
+
+        <nav>
+            <a href="main.html">Home</a> 
+            <a href="search.html">Search</a> 
+            <a href="board.html">Board</a>
+            <a href="signIn.html">SignIn</a>
+            
+            
+      
+        </nav>
+       
+
+        <form action="http://localhost:3000/form.jsp" accept-charset="UTF-8" name="new_info" method="get">
+
+            <fieldset>
+                <legend>와인정보입력</legend>
+
+                와인명: <input type="text" name="winename" required><br><br>
+                
+                빈티지:<input type="text" name="vintage" required><br><br>
+                 
+                품종: <input type="text" name="variety" required> <br><br>
+                
+                국가:<input type="text" name="country" required><br><br>
+                 
+                지역: <input type="password" name="region" required> <br><br>
+
+                바디:<input type="text" name="body" required><br><br>
+                 
+                당도: <input type="password" name="sweetness" required> <br><br>
+                
+                산도:<input type="text" name="acidity" required><br><br>
+                 
+                타닌: <input type="password" name="tannin" required> <br><br>
+
+                향: <input type="password" name="aroma" required> <br><br>
+
+                <input type="checkbox" name="judge" class="judge">
+                
+                
+                
+                <input type="submit" name="submit" >   <input type="reset" name="reset"><br><br>
+                 
+
+            </fieldset>
+
+    </div>
+
+    디비 [와인명,빈티지, 품종,나라/지역 ( 바/당/산 , 향),심판유무]
+    
+</body>
+</html>

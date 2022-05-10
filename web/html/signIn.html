@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+</head>
+<body>
+
+    <div class="signInpage">
+
+        <nav>
+            <a href="main.html">Home</a> 
+            <a href="search.html">Search</a> 
+            <a href="board.html">Board</a>
+            <a href="signIn.html">SignIn</a>
+            
+            
+      
+        </nav>
+       
+
+      <!--현재 window.-->
+
+        <form accept-charset="UTF-8" name="login_info" method="get">
+
+
+            <fieldset>
+                <legend>로그인</legend>
+
+                ID  : <input type="text" id="userid" placeholder="초기아이디:js00" onkeyup="show()" onchange="show3()" required> | 
+                PASSWORD  : <input type="password" id="userps" placeholder="123" onkeyup="show2()" onchange="show4()"> 
+
+                <button class="enter" id="enter" >확인</button>
+                <input type="submit">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>클릭 후 이동</legend>
+                
+                <a href="signUp.html">회원가입</a>
+                <a href="wineRegister.html">와인등록</a>
+            </fieldset>
+
+        </form>
+        <div id="d"></div>
+        <div id="d2"></div>
+
+        <div id="d3"></div>
+        <div id="d4"></div>
+
+        
+
+                    
+
+        <script>
+            let enter = document.getElementById('enter');
+            enter.addEventListener('click',entertry);
+
+            function entertry(){
+                let userid = document.getElementById('userid').value;
+                let userps = document.getElementById('userps').value;
+                
+                if(userid == 'js00' && userps == '123'){
+                    alert("로그인 성공");
+                    console.log("로그인 성공");
+                }
+                else{
+                    alert("로그인 실패");
+                    console.log("로그인 실패");
+                }
+
+            }
+
+            document.querySelector('.enter').addEventListener('click',function(){
+                let userid = document.getElementById('userid').value;
+                let userps = document.getElementById('userps').value;
+                
+                if(userid == 'js00' && userps == '123'){
+                    alert("로그인 성공");
+                    console.log("로그인 성공")
+                }
+                else{
+                    alert("로그인 실패");
+                    console.log("로그인 실패");
+                }
+
+            });
+
+            function show(){
+                const showletter = document.getElementById('userid').value;
+                document.getElementById("d").innerText= showletter;
+
+            
+            };
+            function show2(){
+                
+                const showletter2 = document.getElementById('userps').value;
+                document.getElementById("d2").innerText= showletter2;
+        
+            };
+            function show3(){
+                const showletter3 = document.getElementById('userid').value;
+                document.getElementById("d3").innerText= showletter3;
+                 
+            }
+            function show4(){
+                const showletter4 = document.getElementById('userps').value;
+                document.getElementById("d4").innerText= showletter4;
+                 
+            }
+         
+             
+        </script>
+
+      
+    </div>
+
+    
+</body>
+</html>
