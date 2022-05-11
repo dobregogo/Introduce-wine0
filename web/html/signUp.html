@@ -25,13 +25,15 @@
             <fieldset>
                 <legend>개인정보입력</legend>
         
-                이름: <input type="text" name="name" required><br><br>
+                이름: <input type="text" name="name" id="username" required><br><br>
                 
-                아이디:<input type="text" name="pid" required><br><br>
+                아이디:<input type="text" name="pid" id="userid" required><br><br>
                  
-                패스워드: <input type="password" name="ps" required> <br><br>
+                패스워드: <input type="password" name="ps" id="userps" required> <br><br>
                  
-                <input type="submit" name="submit" >   <input type="reset" name="reset"><br><br>
+              
+                <button class="enter" id="enter" onclick="entertry()" >입력내용 확인</button>
+                <input type="submit" name="submit"  >   <input type="reset" name="reset"><br><br>
                  
         
             </fieldset>
@@ -41,7 +43,24 @@
 
     </div>
 
- 
+    <script>
+     
+     function entertry(){
+                let username = document.getElementById('username').value;
+                let userid = document.getElementById('userid').value;
+                let userps = document.getElementById('userps').value;
+                
+                
+                alert( "입력된 NAME : "  + username +"\n" +"입력된 ID : "  + userid +"\n" +"입력된 Password : "  + userps );
+                    
+                    console.log("입력내용 확인");
+            }
+
+      
+
+    </script>
+
+
 
     
 </body>

@@ -31,30 +31,30 @@
             <fieldset>
                 <legend>와인정보입력</legend>
 
-                와인명: <input type="text" name="winename" required><br><br>
+                와인명: <input type="text" name="winename" id="winename" required><br><br>
                 
-                빈티지:<input type="text" name="vintage" required><br><br>
+                빈티지:<input type="text" name="vintage" id="vintage" required><br><br>
                  
-                품종: <input type="text" name="variety" required> <br><br>
+                품종: <input type="text" name="variety" id="variety" required> <br><br>
                 
-                국가:<input type="text" name="country" required><br><br>
+                국가:<input type="text" name="country" id="country" required><br><br>
                  
-                지역: <input type="password" name="region" required> <br><br>
+                지역: <input type="text" name="region" id="region" required> <br><br>
 
-                바디:<input type="text" name="body" required><br><br>
+                바디:<input type="text" name="body" id="body" required><br><br>
                  
-                당도: <input type="password" name="sweetness" required> <br><br>
+                당도: <input type="text" name="sweetness" id="sweetness" required> <br><br>
                 
-                산도:<input type="text" name="acidity" required><br><br>
+                산도:<input type="text" name="acidity" id="acidity" required><br><br>
                  
-                타닌: <input type="password" name="tannin" required> <br><br>
+                타닌: <input type="text" name="tannin" id="tannin" required> <br><br>
 
-                향: <input type="password" name="aroma" required> <br><br>
+                향: <input type="textarea" name="aroma" id="aroma" required> <br><br>
 
-                <input type="checkbox" name="judge" class="judge">
+                <input type="checkbox" name="judge" class="judge" id="judge">
                 
                 
-                
+                <button class="enter" id="enter" onclick="entertry()" >입력내용 확인</button>
                 <input type="submit" name="submit" >   <input type="reset" name="reset"><br><br>
                  
 
@@ -62,7 +62,34 @@
 
     </div>
 
+    <script>
+
+       
+     
+        function entertry(){
+                   let winename = document.getElementById('winename').value;
+                   let vintage = document.getElementById('vintage').value;
+                   let variety = document.getElementById('variety').value;
+                   let country = document.getElementById('country').value;
+                   let region = document.getElementById('region').value;
+                   let body = document.getElementById('body').value;
+                   let sweetness = document.getElementById('sweetness').value;
+                   let acidity = document.getElementById('acidity').value;
+                   let tannin = document.getElementById('tannin').value;
+                   let aroma = document.getElementById('aroma').value;
+                  
+                   
+                   
+                  alert(" 와인명 : " + winename + "\n" + " 빈티지 : " + vintage +"\n"+ " 품종 : "+ variety +"\n"+  " 국가 : " + country +"\n"+ " 지역 : "+ region +"\n"+ " 바디 : " + body+"\n"+ " 당도 : "+sweetness+"\n"+ " 산도 : " + acidity+"\n"+" 타닌 : "+tannin+"\n"+ " 아로마 : "+aroma);
+                console.log("입력내용 확인")
+               };
+   
+         
+   
+       </script>
     디비 [와인명,빈티지, 품종,나라/지역 ( 바/당/산 , 향),심판유무]
+    
+    
     
 </body>
 </html>

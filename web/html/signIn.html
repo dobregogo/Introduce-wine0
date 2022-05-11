@@ -32,7 +32,7 @@
                 ID  : <input type="text" id="userid" placeholder="초기아이디:js00" onkeyup="show()" onchange="show3()" required> | 
                 PASSWORD  : <input type="password" id="userps" placeholder="123" onkeyup="show2()" onchange="show4()"> 
 
-                <button class="enter" id="enter" >확인</button>
+                <button class="enter" id="enter" onclick="entertry()" >입력내용 확인</button>
                 <input type="submit">
 
             </fieldset>
@@ -56,8 +56,8 @@
                     
 
         <script>
-            let enter = document.getElementById('enter');
-            enter.addEventListener('click',entertry);
+            /*let enter = document.getElementById('enter');
+            enter.addEventListener('click',entertry); */
 
             
 
@@ -66,17 +66,17 @@
                 let userps = document.getElementById('userps').value;
                 
                 if(userid == 'js00' && userps == '123'){
-                    alert(userid);
+                    alert("회원명 : "+ userid + "\n" + "비밀번호 : "+ userps );
                     console.log("로그인 성공");
                 }
                 else{
-                    alert(userid);
+                    alert("로그인 실패"+"\n"+ "입력된ID :" + userid + "\n" + "입력된 비밀번호 : "+ userps);
                     console.log("로그인 실패");
                 }
 
             }
 
-            document.querySelector('.enter').addEventListener('click',function(){
+            /*document.querySelector('.enter').addEventListener('click',function(){
                 let userid = document.getElementById('userid').value;
                 let userps = document.getElementById('userps').value;
                 
@@ -114,7 +114,7 @@
                  
             }
          
-             
+             */
         </script>
 
       
